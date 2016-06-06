@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<title>Slideshow</title>
+<meta name="viewport" content="height=device-height, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+	<div class="drop">
+		<ul class="drop_menu">
+			<li><a href='#'>Games</a>
+				<ul>
+					<li><a href='g1.html'>Game 1</a></li>
+					<li><a href='g2.html'>Game 2</a></li>
+					<li><a href='g3.html'>Game 3</a></li>
+					<li><a href='g4.html'>Game 4</a></li>
+					<li><a href='g5.html'>Game 5</a></li>
+				</ul>
+			</li>
+			<li><a href='index.html'>Home</a></li>
+		</ul>
+	</div>
+<h2 class="center">Game 2</h2>
+<p>Based on the images, determine whether the people in the pictures are scared or surprised.</p>
+<div class="content" style="max-width:800px;position:relative">
+
+<div id="Facial Expressions">
+<!--scared-->
+<div class="scaredpics">
+<img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/13/9f/30/139f3010aa11da9736aaa19be4331d9a.jpg">
+<img class="mySlides" src="http://fuzzfix.t2b.click/wp-content/uploads/2015/11/Scared-Cat.jpg">
+<img class="mySlides" src="http://1u88jj3r4db2x4txp44yqfj1.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/scared.jpg">
+<img class="mySlides" src="https://media0.giphy.com/media/kHB6Lr7KzkIOA/200_s.gif">
+<img class="mySlides" src="http://www.creativebloggers.net/wp-content/uploads/2012/07/scared_man.jpg">
+<img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/24/11/69/24116935efb3edb3ed64d650b7f12f4a.jpg">
+<img class="mySlides" src="http://previews.123rf.com/images/genlady/genlady1305/genlady130500027/19660337-Young-caucasian-man-with-amazed-scared-face-expression-on-white-background-Stock-Photo.jpg">
+</div>
+<div class="surprisedpics">
+<!--surprised-->
+<img class="mySlides" src="http://cdn.earthporm.com/wp-content/uploads/2015/05/surprised-shocked-animals-funny-7__700.jpg">
+<img class="mySlides" src="http://www.authormedia.com/wp-content/uploads/2013/04/bigstock-Surprised-Beauty-6228700.jpg">
+<img class="mySlides" src="http://trulyrichclubinsider.com/wp-content/uploads/2015/02/happy-shocked-face.jpg">
+<img class="mySlides" src="http://cdn2.stylecraze.com/wp-content/uploads/2015/05/Surprised-Face-exercies.jpg">
+<img class="mySlides" src="http://previews.123rf.com/images/ronstik/ronstik1208/ronstik120800012/14793752-shocked-man-Stock-Photo-surprised-man-face.jpg">
+<img class="mySlides" src="http://previews.123rf.com/images/william87/william871104/william87110400107/9538948-Young-Surprised-Man-Portrait-on-White-Stock-Photo-face.jpg">
+<img class="mySlides" src="http://blurbrain.com/wp-content/uploads/2013/04/shocked-old-lady.png">
+<img class="mySlides" src="http://cdn3-i.hitc-s.com/55/surprised_baby_8501.jpg">
+</div>
+</div>
+<p id="score"></p>
+<div class="buttons">
+  <button id="happybut" onclick="check(0)">scared</button>
+  <button id="unhappybut" onclick="check(1)">surprised</button>
+</div>
+<!--<a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)"><</a>
+<a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">></a>-->
+</div>
+<script>
+var slideIndex = 1;
+var Score = 0;
+var actual = document.getElementById("scared" || "not scared");
+showDivs(slideIndex);
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (var i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+function check(measured){
+  if(slideIndex<8){
+    var actual = 0;
+  }else{
+    var actual = 1;
+  }
+  if(measured == actual){
+    Score++; 
+  document.getElementById("score").innerHTML="Your Score is: "+Score;
+  } 
+  showDivs(slideIndex++);
+  
+}
+/*var scaredbut = document.getElementById("happy");
+
+var scaredpics = document.getElementsByClassName("scaredpics");
+var unscaredpics = document.getElementsByClassName("unscaredpics");*/
+</script>
+
+</body>
+</html> 
