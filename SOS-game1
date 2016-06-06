@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<title>Slideshow</title>
+<meta name="viewport" content="height=device-height, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+	<div class="drop">
+		<ul class="drop_menu">
+			<li><a href='#'>Games</a>
+				<ul>
+					<li><a href='g1.html'>Game 1</a></li>	
+					<li><a href='g2.html'>Game 2</a></li>
+					<li><a href='g3.html'>Game 3</a></li>
+					<li><a href='g4.html'>Game 4</a></li>
+					<li><a href='g5.html'>Game 5</a></li>
+				</ul>
+			</li>
+			<li><a href='index.html'>Home</a></li>
+		</ul>
+	</div>
+<h2 class="center">Game 1</h2>
+<p>Based on the images, determine whether the people in the pictures are happy or unhappy.</p>
+<div class="content" style="max-width:800px;position:relative">
+
+<div id="Facial Expressions">
+<!--happy-->
+<div class="happypics">
+<img class="mySlides" src="https://i.ytimg.com/vi/sAq8HWP3yFQ/maxresdefault.jpg">
+<img class="mySlides" src="http://www.hungryforchange.tv/images/articles/happy-exercising-water.jpg">
+<img class="mySlides" src="https://cdn.empowernetwork.com/user_images/post/2014/11/23/6/6a/000b/540x293_20141123_66a000b46a75b53a1f9ec0b35edcadff_jpg.jpg">
+<img class="mySlides" src="http://callaneticsstudio.com/wp-content/uploads/2014/03/happy-and-content.jpg">
+<img class="mySlides" src="http://www.pngall.com/wp-content/uploads/2016/04/Happy-Person-Free-Download-PNG-180x180.png">
+<img class="mySlides" src="http://static1.squarespace.com/static/5650fb35e4b0a95fdb79fb19/t/56c9175b8a65e2903b691df4/1456019295971">
+<img class="mySlides" src="http://newsrescue.com/wp-content/uploads/2015/04/happy-person.jpg">
+</div>
+<div class="unhappypics">
+<!--unhappy-->
+<img class="mySlides" src="http://www.spiritvoyage.com/blog/wp-content/uploads/Screen-Shot-2014-12-05-at-2.03.51-PM-285x300.png">
+<img class="mySlides" src="https://pleasureinlearning.files.wordpress.com/2012/06/unhappy-man.jpg">
+<img class="mySlides" src="https://ontheriver09.files.wordpress.com/2014/11/19-things-unhappy-people-do.jpg">
+<img class="mySlides" src="http://cdn2.spectator.co.uk/files/2014/04/72324165.jpg">
+<img class="mySlides" src="http://greatergood.berkeley.edu/images/uploads/iStock_000001932580XSmall.jpg">
+<img class="mySlides" src="http://cliparts.co/cliparts/di9/rad/di9radxAT.jpg">
+<img class="mySlides" src="http://theforexchampionship.com/wp-content/uploads/2014/03/unhappy-intern-004.jpg">
+<img class="mySlides" src="https://wordfromthewell.files.wordpress.com/2012/10/you-dont-need-to-prove-youre-worth-something.jpg">
+</div>
+</div>
+<p id="score"></p>
+<div class="buttons">
+  <button id="happybut" onclick="check(0)">happy</button>
+  <button id="unhappybut" onclick="check(1)">unhappy</button>
+</div>
+<!--<a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)"><</a>
+<a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">></a>-->
+</div>
+<script>
+var slideIndex = 1;
+var Score = 0;
+var actual = document.getElementById("happy" || "unhappy");
+showDivs(slideIndex);
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (var i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+function check(measured){
+  if(slideIndex<8){
+    var actual = 0;
+  }else{
+    var actual = 1;
+  }
+  if(measured == actual){
+    Score++; 
+  var scoring= document.getElementById("score").innerHTML="Your Score is: "+Score;
+  scoring.style="bold";
+  } 
+  showDivs(slideIndex++);
+  
+}
+/*var happybut = document.getElementById("happy");
+
+var happypics = document.getElementsByClassName("happypics");
+var unhappypics = document.getElementsByClassName("unhappypics");*/</script>
+
+</body>
+</html> 
