@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<title>Slideshow</title>
+<meta name="viewport" content="height=device-height, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+	<div class="drop">
+		<ul class="drop_menu">
+			<li><a href='#'>Games</a>
+				<ul>
+					<li><a href='g1.html'>Game 1</a></li>	
+					<li><a href='g2.html'>Game 2</a></li>
+					<li><a href='g3.html'>Game 3</a></li>
+					<li><a href='g4.html'>Game 4</a></li>
+					<li><a href='g5.html'>Game 5</a></li>
+				</ul>
+			</li>
+			<li><a href='index.html'>Home</a></li>
+		</ul>
+	</div>
+
+<h2 class="center">Game 5</h2>
+<p>Based on the images, determine whether the emotions of the people in the pictures are real(natural) or fake(purposely made).</p>
+<div class="content" style="max-width:800px;position:relative">
+
+<div id="Facial Expressions">
+<!--scared-->
+<div class="realpics">
+<img class="mySlides" src="https://timedotcom.files.wordpress.com/2014/03/happily-surprised.jpg?quality=75&strip=color&w=814">
+<img class="mySlides" src="data:image/jpeg;base64,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">
+<img class="mySlides" src="https://nmtclassof2012.wikispaces.com/file/view/091031002319-large.jpg/99661651/091031002319-large.jpg">
+<img class="mySlides" src="http://callaneticsstudio.com/wp-content/uploads/2014/03/happy-and-content.jpg">
+<img class="mySlides" src="http://www.pngall.com/wp-content/uploads/2016/04/Happy-Person-Free-Download-PNG-180x180.png">
+<img class="mySlides" src="http://static1.squarespace.com/static/5650fb35e4b0a95fdb79fb19/t/56c9175b8a65e2903b691df4/1456019295971">
+<img class="mySlides" src="http://newsrescue.com/wp-content/uploads/2015/04/happy-person.jpg">
+</div>
+<div class="fakepics">
+<!--unscared-->
+<img class="mySlides" src="http://i51.photobucket.com/albums/f380/nicolemathison/IMG_8412_sharpenedforweb.jpg">
+<img class="mySlides" src="http://www.nicolasfradet.com/wp-content/uploads/2013/02/fake_smile.jpg">
+<img class="mySlides" src="http://d236bkdxj385sg.cloudfront.net/wp-content/uploads/2013/08/scared-man-pf.jpg">
+<img class="mySlides" src="http://images.hellogiggles.com/uploads/2015/11/30/o-DAWSONS-CREEK-REUNION-facebook-500x375c.jpg">
+<img class="mySlides" src="http://cache3.asset-cache.net/xd/453112905.jpg?v=1&c=IWSAsset&k=2&d=62CA815BFB1CE480BB3220E24228C0ABD1DB44E5599D888ADFDEBD930F4F503B931F55CCDD52801C">
+<img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/236x/66/2a/3f/662a3f1412dad7e7cec697b952960134.jpgg">
+<img class="mySlides" src="http://www.rawstory.com/wp-content/uploads/2014/10/Disgusted-woman-via-Shutterstock-800x430.png">
+<img class="mySlides" src="http://universityofcalifornia.edu/sites/default/files/angry_face.jpg">
+</div>
+</div>
+<p id="score"></p>
+<div class="buttons">
+  <button id="happybut" onclick="check(0)">real</button>
+  <button id="unhappybut" onclick="check(1)">fake</button>
+</div>
+<!--<a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)"><</a>
+<a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">></a>-->
+</div>
+<script>
+var slideIndex = 1;
+var Score = 0;
+var actual = document.getElementById("scared" || "not scared");
+showDivs(slideIndex);
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (var i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+function check(measured){
+  if(slideIndex<8){
+    var actual = 0;
+  }else{
+    var actual = 1;
+  }
+  if(measured == actual){
+    Score++; 
+  document.getElementById("score").innerHTML="Your Score is: "+Score;
+  } 
+  showDivs(slideIndex++);
+  
+}
+/*var scaredbut = document.getElementById("happy");
+
+var scaredpics = document.getElementsByClassName("scaredpics");
+var unscaredpics = document.getElementsByClassName("unscaredpics");*/
+</script>
+
+</body>
+</html> 
