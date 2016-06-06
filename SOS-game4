@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+/*S.O.S is an interactive online website were autistic kids may learn how to tell facial*/
+<title>Slideshow</title>
+<meta name="viewport" content="height=device-height, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+	<div class="drop">
+		<ul class="drop_menu">
+			<li><a href='#'>Games</a>
+				<ul>
+					<li><a href='g1.html'>Game 1</a></li>	
+					<li><a href='g2.html'>Game 2</a></li>
+					<li><a href='g3.html'>Game 3</a></li>
+					<li><a href='g4.html'>Game 4</a></li>
+					<li><a href='g5.html'>Game 5</a></li>
+				</ul>
+			</li>
+			<li><a href='index.html'>Home</a></li>
+		</ul>
+	</div>
+
+<h2 class="center">Game 4</h2>
+<p>Based on the images, determine whether the smiles of the people are real(natural) or fake(purposely made).</p>
+<div class="content" style="max-width:800px;position:relative">
+
+<div id="Facial Expressions">
+<!--likes-->
+<div class="likespics">
+<img class="mySlides" src="https://i.ytimg.com/vi/sAq8HWP3yFQ/maxresdefault.jpg">
+<img class="mySlides" src="http://www.hungryforchange.tv/images/articles/happy-exercising-water.jpg">
+<img class="mySlides" src="http://www.rosemarydo.com/wp-content/uploads/2012/09/tips-to-detect-real-smiles-600x400.jpg">
+<img class="mySlides" src="http://callaneticsstudio.com/wp-content/uploads/2014/03/happy-and-content.jpg">
+<img class="mySlides" src="http://www.pngall.com/wp-content/uploads/2016/04/Happy-Person-Free-Download-PNG-180x180.png">
+<img class="mySlides" src="http://static1.squarespace.com/static/5650fb35e4b0a95fdb79fb19/t/56c9175b8a65e2903b691df4/1456019295971">
+<img class="mySlides" src="http://www.nicolasfradet.com/wp-content/uploads/2013/02/George_Clooney_Real_Genuine_Smile-e1419909570445.jpg">
+</div>
+<div class="dislikespics">
+<!--dislikes-->
+<img class="mySlides" src="http://i.dailymail.co.uk/i/pix/2011/07/13/article-2014412-0CFB641900000578-390_468x582.jpg">
+<img class="mySlides" src="http://happierhuman.wpengine.netdna-cdn.com/wp-content/uploads/2012/05/fake-smile-guy-300x225.jpg">
+<img class="mySlides" src="http://i.dailymail.co.uk/i/pix/2011/02/24/article-1360076-099271EB000005DC-336_468x300.jpg">
+<img class="mySlides" src="https://idology.files.wordpress.com/2010/01/fake_smile_2.jpg">
+<img class="mySlides" src="https://i.ytimg.com/vi/aYkb8evNti8/maxresdefault.jpg">
+<img class="mySlides" src="http://cliparts.co/cliparts/di9/rad/di9radxAT.jpg">
+<img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/7c/9a/c8/7c9ac87bb80097f7ab69c15d7df56dd6.jpg">
+<img class="mySlides" src="http://rcportraits.com/wp-content/uploads/2013/11/Ethan-Dodd-120-1600x1280.jpg">
+</div>
+</div>
+<p id="score"></p>
+<div class="buttons">
+  <button id="happybut" onclick="check(0)">real smile</button>
+  <button id="unhappybut" onclick="check(1)">fake smile</button>
+</div>
+<!--<a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)"><</a>
+<a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">></a>-->
+</div>
+<script>
+
+/*S.O.S is an interactive online website were autistic kids may learn how to tell facial
+expressions by playing the 5 games that are offered in the games bar. The purposes of having a website for autistic children so 
+that they may practice on these social skills and not miss valuable class time because, 
+most autistic children who go to school lose vaaluable class time, due to the school councelers removing students from classes.*/
+
+var slideIndex = 1;
+var Score = 0;
+var actual = document.getElementById("likes" || "dislikes");
+showDivs(slideIndex);
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (var i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+function check(measured){
+  if(slideIndex<8){
+    var actual = 0;
+  }else{
+    var actual = 1;
+  }
+  if(measured == actual){
+    Score++; 
+  document.getElementById("score").innerHTML="Your Score is: "+Score;
+  } 
+  showDivs(slideIndex++);
+  
+}
+/*var scaredbut = document.getElementById("likes");
+
+var scaredpics = document.getElementsByClassName("likespics");
+var unscaredpics = document.getElementsByClassName("likespics");*/
+</script>
+
+</body>
+</html> 
